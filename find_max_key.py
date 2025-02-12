@@ -6,4 +6,16 @@ def find_max_key(data: dict):
     Returns:
         int: The maximum key in the dictionary.
     """
-    return 
+    keys=data.keys()
+    return max(keys)
+data = {
+    1: 'a', 
+    2: 'b', 
+    3: 'c'
+  }
+data = {
+    1.4 :'a', 
+    7.8 :'b', 
+    4 : 'c'
+  }
+print(find_max_key(data))

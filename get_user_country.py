@@ -8,4 +8,20 @@ def get_user_country(data:list, name:str) -> list:
     Returns:
         str: The country of the user with the given name
     """
-    return 
+    country=data[0]
+    for person in data:
+        if person['name']==name:
+            country=person['country']
+    return country
+data = [
+  {
+    'name': 'John', 
+    'country': 'USA'
+  }, 
+  {
+    'name': 'Mary', 
+    'country': 'UK'
+  }
+]
+name = "John"
+print(get_user_country(data,name))
